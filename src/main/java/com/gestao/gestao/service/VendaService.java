@@ -24,7 +24,7 @@ public class VendaService {
 		Venda venda = new Venda();
 		venda.setProduto(produto);
 		venda.setQuantidade(quantidade);
-		venda.setTotal(produto.getValor() * produto.getQuantidade());
+		venda.setTotal(produto.getValor() * quantidade);
 		return vendaRepository.save(venda);
 	}
 }

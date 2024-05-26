@@ -1,5 +1,9 @@
 package com.gestao.gestao.model;
 
+import java.sql.Date;
+
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,8 +28,20 @@ public class Venda {
 	@Column(name = "total")
 	private double total;
 	
+	@CreationTimestamp
+	@Column(name = "data")
+	private Date dataVenda;
+	
 	public double getTotal() {
 		return total;
+	}
+
+	public Date getDataVenda() {
+		return dataVenda;
+	}
+
+	public void setDataVenda(Date dataVenda) {
+		this.dataVenda = dataVenda;
 	}
 
 	public void setTotal(double total) {

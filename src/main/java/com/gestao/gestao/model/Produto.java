@@ -22,8 +22,8 @@ public class Produto {
 	@Column(name = "valor", nullable = true)
 	private double valor;
 	
-	@Column(name = "quantidade", nullable = true)
-	private int quantidade;
+	@Column(name = "estoque", nullable = true)
+	private int estoque;
 
 	public Integer getId() {
 		return id;
@@ -49,12 +49,12 @@ public class Produto {
 		this.valor = valor;
 	}
 
-	public int getQuantidade() {
-		return quantidade;
+	public int getEstoque() {
+		return estoque;
 	}
 
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
 	}
 	
 	
